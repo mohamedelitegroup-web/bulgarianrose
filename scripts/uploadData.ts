@@ -274,7 +274,7 @@ async function bulkUploadProducts() {
       form.set("isFeatured", "false");
       form.set("images", await fileFromPath(imagePath));
 
-      const res = await fetch("http://localhost:3000/api/create-product", {
+      const res = await fetch("https://bulgarianrose.vercel.app/api/create-product", {
         method: "POST",
         body: form as any,
       });

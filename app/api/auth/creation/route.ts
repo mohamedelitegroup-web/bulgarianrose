@@ -46,7 +46,7 @@ export async function GET(request: Request) {
     return NextResponse.redirect(
       process.env.NODE_ENV === "development"
         ? `http://localhost:3000/${locale}`
-        : `https://shoe-marshal.vercel.app/${locale}`,
+        : `https://bulgarianrose.vercel.app/${locale}`,
     );
   } catch (error) {
     // معالجة الأخطاء المحتملة
