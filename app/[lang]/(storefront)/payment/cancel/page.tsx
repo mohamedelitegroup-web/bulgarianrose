@@ -17,12 +17,18 @@ export default async function CancelRoute({ params }: { params: { lang: "en" | "
           </div>
 
           <div className={`mt-3 text-center sm:mt-5 w-full ${isRtl ? "rtl" : ""}`}>
-            <h3 className="text-lg leading-6 font-medium">{dict.payment.cancel.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">{dict.payment.cancel.description}</p>
+            <h3 className="text-lg leading-6 font-medium">
+  {dict?.payment?.cancel?.title ?? "Payment Canceled"}
+</h3>
+<p className="mt-2 text-sm text-muted-foreground">
+  {dict?.payment?.cancel?.description ?? "Your payment has been canceled."}
+</p>
+<Button asChild className="w-full mt-5 sm:mt-6">
+  <Link href={`/${params.lang}`}>
+    {dict?.payment?.cancel?.backToHome ?? "Back to Home"}
+  </Link>
+</Button>
 
-            <Button asChild className="w-full mt-5 sm:mt-6">
-              <Link href={`/${params.lang}`}>{dict.payment.cancel.backToHome}</Link>
-            </Button>
           </div>
         </div>
       </Card>
