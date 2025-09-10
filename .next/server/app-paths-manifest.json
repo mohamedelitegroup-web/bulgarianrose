@@ -1,0 +1,6 @@
+{
+  "/api/products/featured/route": "app/api/products/featured/route.js",
+  "/api/auth/[kindeAuth]/route": "app/api/auth/[kindeAuth]/route.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/[lang]/(storefront)/page": "app/[lang]/(storefront)/page.js"
+}
