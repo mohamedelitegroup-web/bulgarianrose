@@ -48,8 +48,11 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Exclude all internal paths and API routes
-    "/((?!_next|api/uploadthing|api|favicon.ico|assets|.*\\..*).*)",
+    // Match all paths EXCEPT:
+    // - /_next (Next.js internals)
+    // - /api (including UploadThing)
+    // - static files (e.g. .png, .js, etc.)
+    "/((?!_next|api/uploadthing|api|favicon.ico|.*\\..*).*)",
   ],
 }
 
