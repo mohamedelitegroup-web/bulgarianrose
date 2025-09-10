@@ -47,7 +47,9 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
-  matcher: ["/((?!_next|api).*)"],
+  matcher: [
+    // Exclude all internal paths and API routes
+    "/((?!_next|api/uploadthing|api|favicon.ico|assets|.*\\..*).*)",
+  ],
 }
 
