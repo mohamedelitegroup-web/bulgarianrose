@@ -33,5 +33,14 @@ export default async function ProductIdRoute({
 }) {
   const data = await getData(params.id);
 
-  return <ProductDetails product={data} lang={params.lang} />;
+  return (
+  <ProductDetails
+    product={{
+      ...data,
+      name_ar: data.name_ar ?? undefined,
+      description_ar: data.description_ar ?? undefined,
+    }}
+    lang={params.lang}
+  />
+);
 }
